@@ -16,9 +16,9 @@ public class Calculator {
         System.out.println(result);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Bitte eine Zahl eingeben:");
+        System.out.println("Bitte erste Zahl eingeben:");
         float input1 = scanner.nextFloat();
-        System.out.println("Bitte eine Zahl eingeben:");
+        System.out.println("Bitte zweite Zahl eingeben:");
         float input2 = scanner.nextFloat();
         double result2 = addition.calculate(new float[]{input1, input2});
         System.out.println(result2);
