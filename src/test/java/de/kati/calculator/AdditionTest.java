@@ -55,9 +55,53 @@ class AdditionTest {
     }
 
     @Test
+    @DisplayName("given 2 and 0 when calculate than result have to be 2")
+    void addValueWithZero(){
+
+        /*Given*/
+        float value1 = 2;
+        float zero = Float.MIN_VALUE;
+
+        /*When*/
+        double result = cut.calculate(value1, zero);
+
+        /*Than*/
+        assertThat(result).isEqualTo(2);
+    }
+
+    @Test
     @Disabled("couse not impleented")
     @DisplayName("nix testet irgend was")
     void nix() {
+        assertThat(true).isTrue();
+
+
+    }
+
+    @Test
+    void testWithNegativeValues(){
+        /* GIVEN */
+        float value1 = -2;
+        float value2 = -3;
+
+        /* WHEN */
+        double result = cut.calculate(value1, value2);
+
+        /* THAN */
+        assertThat(result).isEqualTo(-5);
+    }
+
+    @Test
+    void testWithNegativeValuesAndPositiveValues(){
+        /* GIVEN */
+        float value1 = -2;
+        float value2 = 3;
+
+        /* WHEN */
+        double result = cut.calculate(value1, value2);
+
+        /* THAN */
+        assertThat(result).isEqualTo(1);
 
     }
 }
